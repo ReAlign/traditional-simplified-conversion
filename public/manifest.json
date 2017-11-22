@@ -1,0 +1,16 @@
+{
+    "name": "繁简转换",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "author": "ReAlign",
+    "description": "繁简字体转换工具",
+    "homepage_url": "https://github.com/ReAlign/traditional-simplified-conversion",
+    "permissions": [
+        "tabs", "http://*/*", "https://*/*"
+    ],
+    "browser_action": {
+        "default_title": "繁简转换",
+        "default_icon": "images/icon.png",
+        "default_popup": "index.html"
+    }
+}
