@@ -1,3 +1,11 @@
 # traditional-simplified-conversion
 
-![](https://github.com/ReAlign/traditional-simplified-conversion/blob/b1f8e607e4169d8e8947c5c84bcdf7845e2f09d4/source/icon.png)
+![icon](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/icon.png)
+
+![1](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/1.jpg)
+
+![2](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/2.jpg)
+
+![3](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/3.jpg)
+
+![4](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/4.jpg)
