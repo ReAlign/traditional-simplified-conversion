@@ -9,3 +9,5 @@
 ![3](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/3.jpg)
 
 ![4](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/4.jpg)
+
+![5](https://github.com/ReAlign/traditional-simplified-conversion/blob/master/source/5.jpg)
