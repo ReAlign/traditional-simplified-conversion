@@ -8,6 +8,7 @@
     "permissions": [
         "tabs", "http://*/*", "https://*/*"
     ],
+    "update_url": "http://clients2.google.com/service/update2/crx",
     "browser_action": {
         "default_title": "繁简转换",
         "default_icon": "images/icon.png",
