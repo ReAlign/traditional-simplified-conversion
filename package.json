@@ -4,8 +4,8 @@
   "description": "A converter Between Traditional Chinese Characters And Simplified Chinese Characters",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack",
-    "build": "npm run dev && zip -r converter.zip dist/converter",
+    "dev": "webpack --watch",
+    "build": "webpack && zip -r converter.zip dist/converter",
     "clean": "rm -rf ./dist/*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src"
@@ -29,6 +29,7 @@
     "babel-eslint": "^8.0.2",
     "webpack": "1.12.14",
     "copy-webpack-plugin": "^4.2.0",
+    "extract-text-webpack-plugin": "1.0.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "css-loader": "0.23.1",

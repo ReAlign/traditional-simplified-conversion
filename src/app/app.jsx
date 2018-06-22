@@ -1,5 +1,4 @@
-require('./app.scss');
-import 'react-tippy/dist/tippy.css';
+import './app.scss';
 
 import React from 'react';
 import Clipboard from 'clipboard';

@@ -1,8 +1,11 @@
-let path = require('path');
-let webpack = require('webpack');
-let CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
-let baseName = 'dist/converter';
+const extractCss = new ExtractTextWebpackPlugin("app.css");
+
+const baseName = 'dist/converter';
 
 module.exports = {
     entry: {
@@ -13,12 +16,6 @@ module.exports = {
         filename: '[name].js',
         chunkFilename: '[id].[chunkhash].chunk.js',
     },
-    plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new CopyWebpackPlugin([{
-            from: 'public'
-        }])
-    ],
     resolve: {
         root: [
             __dirname,
@@ -42,8 +39,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
-            },
+                loader: extractCss.extract(['css', 'sass'])},
             {
                 test: /\.(jpg|png|gif|svg)$/,
                 loader: 'url?limit=10000&name=images/[path][name].[hash].[ext]',
@@ -54,4 +50,24 @@ module.exports = {
             },
         ],
     },
+    sassLoader:{
+        includePaths:[path.resolve(__dirname, './src')]
+    },
+    plugins: [
+        extractCss,
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new CopyWebpackPlugin([{
+            from: 'public'
+        }])
+    ],
+    watchOptions:{
+        poll: 1000,
+        aggregeateTimeout: 500,
+        ignored: /node_modules/
+    }
 }
